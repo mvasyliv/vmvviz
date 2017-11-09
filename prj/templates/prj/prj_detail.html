@@ -1,0 +1,12 @@
+{% extends 'prj/base.html' %}
+{% block title_page %}Проект: {{  projectdetails.name_prj}}{% endblock %}
+{% block content %}
+    <div class="prj">
+        <!--<h1><a>{{ projectdetails.name_prj }}</a></h1></-->
+        <p><div class="lbl"><label>Опис проекта:</label></div>{{ projectdetails.description|linebreaksbr }}</p>
+        <div class="date">
+            <p><div class="lbl"><label>Початок розробки:</label></div> {{ projectdetails.start_date }}</p>
+            <p><div class="lbl"><label>Завершення розробки:</label></div> {{ projectdetails.finish_date }}</p>
+        </div>
+    </div>
+{% endblock %}
