@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from .models import Prject
 
-# Create your views here.
+def prj_list(request):
+    projects = Prject.objects.all()
+    return render(request, 'prj/prj_list.html', {'projects' : projects})
