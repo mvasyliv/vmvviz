@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List project</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+<body>
+<div>
+    <h1><a href="/">Список розроблених проектів</a></h1>
+</div>
+<div>
+    {% for prj in projects %}
+        <div>
+            <h1><a href="">{{ prj.name_prj }}</a></h1>
+            <p>Період розробки: з {{ prj.start_date }} до {{ prj.finish_date }}</p>
+            <p>{{ prj.description|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+</div>
+</body>
+</html>
